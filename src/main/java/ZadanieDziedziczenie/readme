@@ -1,0 +1,26 @@
+Napisz program, który będzie obsługiwał Restauracje typu Bar Szybkiej Obsługi i Pizzeria. Zarówno bar jak i pizzeria powinny mieć parametry:
+
+- Cash Amount
+- Name
+- Owner
+- Oba bary powinny mieć jakieś posiłki, ale: bar - ma burgery, frytki, tortille, a pizzeria tylko pizze. Posiłki powinny być dla uproszenia jako mapa na zasadzie: Nazwa posiłku - cena
+
+Oba bary powinny mieć mieć możliwośc sprzedaży (jakaś metoda typu placeOrder, która zwiększy cash amount w zalezności od wyboru posiłku). Zastanów się w jaki sposób rozwiązać to dziedziczeniem (jedna metoda sell dla obu klas, ale zachowująca się inaczej (standardowe dziedziczenie)). Metoda powinna dodać do listy dla baru szybkiej obsługi string typu "Ordered element with name <name> and price <price>", a dla pizzerii wyprintować tego samego stringa w konsoli.
+
+
+Dodatkowo powinny mieć:
+- bar szybkiej obsługi parametr: fastFoodEmployee z nazwą pracownika
+- pizzeria parametr: pizzeriaEmployee z nazwą pracownika
+
+
+W pizzerii kupuje klient - customer, który ma imię, określoną ilość gotówki i z każdym zakupem ilośc gotówki mu się zmniejsza, ale dodawany jest do listy posiłek (na jednej liście może byc zarówno posiłek z baru, jak i z pizzerii - utuczymy gościa troche :D ).
+
+Zastanów się, które elementy mogą być wspólne, przemyśl architekturę kodu, co powinno być abstrakcją, co zwykłą klasą, jak powinien wyglądac konstruktor, jakie typy powinny mieć zmienne itp.
+
+
+Task 2 (tylko po zrobieniu 1 i przeczytaniu o interfejsach):
+stwórz interfejs OrderSupplies, który będzie implementowany zarówno przez bar szybkiej obsługi i przez pizzerię. Dodaj do interfejsu metodę typu "placeOrderForSupplies". Wyobraź sobie, że jesteś dostawcą składników dla barów jak i dla pizzerii, który wprowadza taki interfejs dla klientów.
+
+Co się dzieje, jak klasy z barem i pizzerią implementują interfejs, w którym jest metoda?
+
+Zaimplementuj metodę w każdej z klas i wywołaj ją w kodzie.
